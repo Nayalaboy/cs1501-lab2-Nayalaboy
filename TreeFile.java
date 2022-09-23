@@ -105,8 +105,8 @@ public class TreeFile {
    private void writeTree(FileWriter file, BinaryNode<Character> root) throws IOException{
      if(root != null){
        if(root.left == null && root.right == null){ //leaf: write L
-           file.write("L"+root.data+"\n");
-          return;
+           file.write("L"+root.data);
+           return;
          //TODO: write "L root.data" to the file and return
        } else { //internal: write I
          file.write("I " + root.data + "\n");
