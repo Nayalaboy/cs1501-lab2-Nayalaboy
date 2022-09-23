@@ -106,6 +106,7 @@ public class TreeFile {
      if(root != null){
        if(root.left == null && root.right == null){ //leaf: write L
            file.write("L"+root.data+"\n");
+          return;
          //TODO: write "L root.data" to the file and return
        } else { //internal: write I
          file.write("I " + root.data + "\n");
